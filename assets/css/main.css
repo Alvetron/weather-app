@@ -230,7 +230,55 @@ body {
   font-weight: 300;
 }
 
-@keyframes loaderRotate{
+.error-popup {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: none;
+  padding-top: 7rem;
+  background-color: #1173aa;
+  transition: top 2s;
+}
+
+.error-popup.active {
+  display: block;
+}
+
+.error-popup__inner {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.error-popup__smile {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 8rem;
+}
+
+.error-popup__text {
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.error-popup__refresh {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #ffffff;
+  background-color: rgb(28, 144, 211);
+  border: none;
+}
+
+.error-popup__refresh:hover {
+  cursor: pointer;
+}
+
+@keyframes loaderRotate {
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
   }

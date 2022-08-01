@@ -38,20 +38,30 @@
   <main class="main">
     <div class="current-weather">
       <time class="current-weather__date" datetime="">Monday, 27th aprill</time>
-      <time class="current-weather__time" datetime="">6:27</time>
+      <time class="current-weather__time" datetime="">???</time>
       <h3 class="current-weather__city">London</h3>
       <img class="current-weather__img" src="http://cdn.weatherapi.com/weather/128x128/night/116.png" width="128" height="128" alt="">
-      <p class="current-weather__temp">22</p>
+      <p class="current-weather__temp">??</p>
       <p class="current-weather__day">Monday</p>
     </div>
     <div class="forecast">
       <ul class="forecast__list">
         <li class="forecast__item">
           <img class="forcast__img" src="http://cdn.weatherapi.com/weather/64x64/night/116.png" alt="" width="64" height="64">
-          <p class="forecast__temp">22</p>
+          <p class="forecast__temp">??</p>
           <p class="forecast__day">Thuesday</p>
         </li>
       </ul>
+    </div>
+    <div class="error-popup">
+      <div class="error-popup__inner">
+        <span class="error-popup__smile">:(</span>
+        <p class="error-popup__text">This ERROR is most likely related to the expired API key.<br>
+        If your internet connection is OK try to refresh.<br>
+        Report me if refresh is not helped with ERROR.
+        </p>
+        <button class="error-popup__refresh" type="button">Refresh</button>
+      </div>
     </div>
   </main>
 </body>

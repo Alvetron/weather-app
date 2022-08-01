@@ -16,15 +16,14 @@ const currentWeatherImgEl = document.querySelector('.current-weather__img');
 const currentWeatherTempEl = document.querySelector('.current-weather__temp');
 const currentWeatherDayEl = document.querySelector('.current-weather__day');
 
-
-
 const userDate = new Date();
 let isRefreshed = false;
 
-refreshUserTime();
-
+const errorPopup = document.querySelector('.error-popup');
+const refreshBtn = document.querySelector('.error-popup__refresh');
 
 removeLoader();
+refreshUserTime();
 searchByInput();
 getWeather('London');
 
@@ -68,7 +67,12 @@ function searchByInput() {
 }
 
 async function getWeather(city) {
-  const resp = await fetch(`${MAIN_URL + API_KEY}&q=${city}&days=7`);
+  const resp = await fetch(`${MAIN_URL + API_KEY}&q=${city}&days=7`)
+  .catch(error => {
+    errorPopup.classList.add('active');
+  });
+
+
   const respJson = await resp.json();
   const respData = respJson;
 
@@ -79,7 +83,7 @@ async function getWeather(city) {
 
 function getBgByCurrentWeather(data) {
   const weatherCode = data.current.condition.code;
-  
+
   body.classList[0] ? body.classList.remove(body.classList[0]) : '';
 
   if (weatherCode === 1000) {
@@ -140,3 +144,8 @@ function getBigImg(url) {
   newUrl[4] = '128x128'
   return newUrl.join('/');
 }
+
+
+refreshBtn.addEventListener('click', () => {
+  document.location.reload();
+})
