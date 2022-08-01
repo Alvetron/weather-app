@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/main.css">
+  
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- FAVICONS -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicons/site.webmanifest">
+  <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <title>Weather-app</title>
+
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <div class="loader active"></div>
+  <form class="search-form">
+    <input class="search-form__input" placeholder="London" type="text">
+    <button class="search-form__btn" type="button">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </form>
+  <main class="main">
+    <div class="current-weather">
+      <time class="current-weather__date" datetime="">Monday, 27th aprill</time>
+      <time class="current-weather__time" datetime="">6:27</time>
+      <h3 class="current-weather__city">London</h3>
+      <img class="current-weather__img" src="http://cdn.weatherapi.com/weather/128x128/night/116.png" width="128" height="128" alt="">
+      <p class="current-weather__temp">22</p>
+      <p class="current-weather__day">Monday</p>
+    </div>
+    <div class="forecast">
+      <ul class="forecast__list">
+        <li class="forecast__item">
+          <img class="forcast__img" src="http://cdn.weatherapi.com/weather/64x64/night/116.png" alt="" width="64" height="64">
+          <p class="forecast__temp">22</p>
+          <p class="forecast__day">Thuesday</p>
+        </li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>
