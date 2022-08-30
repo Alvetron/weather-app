@@ -5,6 +5,10 @@
   --main-font: 'Source Sans Pro', sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -21,9 +25,6 @@ ul {
   list-style: none;
 }
 
-* {
-  box-sizing: border-box;
-}
 
 body {
   min-height: 100vh;

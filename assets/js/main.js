@@ -1,4 +1,4 @@
-const API_KEY = '3a28fe5c269f4e0bac0114239223107';
+const API_KEY = '627bc6ee395043bc9ec152524223008';
 const MAIN_URL = `http://api.weatherapi.com/v1/forecast.json?key=`;
 
 const body = document.querySelector('body');
@@ -72,6 +72,7 @@ async function getWeather(city) {
     errorPopup.classList.add('active');
   });
 
+  console.log(`${MAIN_URL + API_KEY}&q=${city}&days=7`)
 
   const respJson = await resp.json();
   const respData = respJson;
@@ -144,7 +145,6 @@ function getBigImg(url) {
   newUrl[4] = '128x128'
   return newUrl.join('/');
 }
-
 
 refreshBtn.addEventListener('click', () => {
   document.location.reload();
