@@ -1,4 +1,4 @@
-const API_KEY = '627bc6ee395043bc9ec152524223008';
+const API_KEY = '52e0acdc9ab449ffb76195343220512';
 const MAIN_URL = `http://api.weatherapi.com/v1/forecast.json?key=`;
 
 const body = document.querySelector('body');
